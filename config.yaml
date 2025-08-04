@@ -1,0 +1,18 @@
+database:
+  engine: postgres
+  uri: postgres://postgres:secret@database:5432/permify?sslmode=disable
+  auto_migrate: true
+  max_open_connections: 20
+  max_idle_connections: 1
+  max_connection_lifetime: 300s
+  max_connection_idle_time: 60s
+
+server:
+  http:
+    enabled: true
+    port: 3476
+  grpc:
+    port: 3478
+
+logger:
+  level: info
